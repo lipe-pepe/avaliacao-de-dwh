@@ -1,0 +1,8 @@
+CREATE TABLE Condutor (
+  CondutorID INT PRIMARY KEY,
+  ClienteID INT NOT NULL,
+  Nome VARCHAR(255) NOT NULL,
+  CNH VARCHAR(20) NOT NULL UNIQUE,
+  DataExpiracaoCNH DATE NOT NULL,
+  FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID)
+);

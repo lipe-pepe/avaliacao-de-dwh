@@ -1,0 +1,9 @@
+CREATE TABLE Cliente (
+  ClienteID INT PRIMARY KEY,
+  Nome VARCHAR(255) NOT NULL,
+  CPF_CNPJ VARCHAR(20) NOT NULL UNIQUE,
+  Endereco VARCHAR(255),
+  Telefone VARCHAR(20),
+  Email VARCHAR(255),
+  Tipo VARCHAR(10) CHECK (Tipo IN ('Física', 'Jurídica'))
+);

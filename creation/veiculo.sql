@@ -1,0 +1,18 @@
+CREATE TABLE Veículo (
+  VeiculoID INT PRIMARY KEY,
+  Placa VARCHAR(10) NOT NULL UNIQUE,
+  Marca VARCHAR(50) NOT NULL,
+  Modelo VARCHAR(50) NOT NULL,
+  Cor VARCHAR(20),
+  Grupo VARCHAR(50) NOT NULL,
+  ArCondicionado BOOLEAN NOT NULL,
+  Cadeirinha BOOLEAN NOT NULL,
+  Chassis VARCHAR(17) NOT NULL UNIQUE,
+  Dimensoes VARCHAR(255),
+  Acessorios JSON,
+  Fotos JSON,
+  EstadoConservacao TEXT,
+  Revisoes TEXT,
+  CaracteristicasRodagemSeguranca TEXT,
+  Mecanizacao VARCHAR(20) CHECK (Mecanizacao IN ('Manual', 'Automática')),
+);
