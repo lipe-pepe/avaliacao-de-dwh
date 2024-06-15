@@ -4,6 +4,7 @@
 -- Felipe Pêpe da Silva Oliveira, DRE: 123589472
 -- João Pedro Martins Filipe Figueiredo Matos Menezes Pereira, DRE: 123642929
 -- Karen Silva Pacheco, DRE: 123476904
+-- Lucas Máximo Dantas, DRE: 118045112
 -- Lucas Tavares, DRE: 120152739
 
 CREATE TABLE Condutor (
