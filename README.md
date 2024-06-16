@@ -1,13 +1,13 @@
 # Avaliação de DWH
 
 _Integrantes:_
--- Alex Teixeira, DRE: 117036607
--- Felipe Augusto de Miranda Villela, DRE: 114080437
--- Felipe Pêpe da Silva Oliveira, DRE: 123589472
--- João Pedro Martins Filipe Figueiredo Matos Menezes Pereira, DRE: 123642929
--- Karen Silva Pacheco, DRE: 123476904
--- Lucas Máximo Dantas, DRE: 118045112
--- Lucas Tavares, DRE: 120152739
+- Alex Teixeira, DRE: 117036607
+- Felipe Augusto de Miranda Villela, DRE: 114080437
+- Felipe Pêpe da Silva Oliveira, DRE: 123589472
+- João Pedro Martins Filipe Figueiredo Matos Menezes Pereira, DRE: 123642929
+- Karen Silva Pacheco, DRE: 123476904
+- Lucas Máximo Dantas, DRE: 118045112
+- Lucas Tavares, DRE: 120152739
 
 Esse repositório contém os códigos do trabalho sobre Data Warehouses, para a disciplina EE890 - Big Data, do curso de Engenharia de Computação e Informação na Universidade Federal do Rio de Janeiro.
 
@@ -26,35 +26,43 @@ Este projeto de Data Warehouse (DWH) tem como objetivo integrar dados de quatro 
 
 Os sistemas das 4 locadoras foram criados por grupos diferentes. Cada um deles está em um diretório diferente e foi compartilhado com formas diferentes. A organização para os códigos fontes ou arquivos de documentação de cada grupo está estruturada da seguinte forma:
 
+```markdown
 /grupos
-/grupo1
-/grupo2
-/grupo3
-/grupo4
+├── /grupo1
+├── /grupo2
+├── /grupo3
+└── /grupo4
+```
 
-Os arquivos de cada grupo possuem os nomes dos respectivos integrantes dos grupos.
+Cada diretório possui os arquivos referentes aos modelos das locadoras. Neles também se encontram os nomes dos respectivos integrantes dos grupos.
 
 ### ETL
 
 Os códigos para extração, transformação e carga ETL para o esquema dimensional estrela estão organizados da seguinte maneira:
 
+```markdown
 /dwh
-/extraction
-/grupo1
-create_stage.sql
-extract.sql
-/grupo2
-create_stage.sql
-extract.sql
-/grupo3
-create_stage.sql
-extract.sql
-/grupo4
-create_stage.sql
-extract.sql
-/transformation
-/loading
-/reports
+├── /extraction
+│ ├── /grupo1
+│ │ ├── create_stage.sql
+│ │ └── extract.sql
+│ ├── /grupo2
+│ │ ├── create_stage.sql
+│ │ └── extract.sql
+│ ├── /grupo3
+│ │ ├── create_stage.sql
+│ │ └── extract.sql
+│ └── /grupo4
+│ ├── create_stage.sql
+│ └── extract.sql
+├── /transformation
+│ ├── create_dimension_tables.sql
+│ ├── populate_dimension_table.sql
+│ └── transformation_tables.sql
+├── /loading
+│ └── loading.sql
+└── /reports
+```
 
 ## Extração de Dados
 
