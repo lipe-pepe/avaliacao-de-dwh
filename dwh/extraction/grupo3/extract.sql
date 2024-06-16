@@ -9,32 +9,32 @@
 
 INSERT INTO stage.Clientes (ID_Cliente, Nome, Tipo_Cliente, Documento, ID_Endereco, Telefone, Email, Data_Nascimento, CNH, Data_Validade_CNH, CNPJ_Empresa)
 SELECT ID_Cliente, Nome, Tipo_Cliente, Documento, ID_Endereco, Telefone, Email, Data_Nascimento, CNH, Data_Validade_CNH, CNPJ_Empresa
-FROM source.Clientes;
+FROM grupo3_schema.Clientes;
 
 INSERT INTO stage.Veiculos (ID_Veículo, ID_Grupo, Placa, Marca, Modelo, Cor, Ar_Condicionado, Mecanização, Cadeirinha, Link_Fotos, Assentos, Tamanho_Mala, Carga_Maxima)
 SELECT ID_Veículo, ID_Grupo, Placa, Marca, Modelo, Cor, Ar_Condicionado, Mecanização, Cadeirinha, Link_Fotos, Assentos, Tamanho_Mala, Carga_Maxima
-FROM source.Veículos;
+FROM grupo3_schema.Veículos;
 
 INSERT INTO stage.Grupos_Veículos (ID_Grupo, Nome_Grupo)
 SELECT ID_Grupo, Nome_Grupo
-FROM source.Grupos_Veículos;
+FROM grupo3_schema.Grupos_Veículos;
 
 INSERT INTO stage.Prontuario (ID_Prontuário, ID_Veículo, Data_Registro, Descrição_Manutenção, Estado_Conservação, Pressão_Pneus, Nível_Óleo)
 SELECT ID_Prontuário, ID_Veículo, Data_Registro, Descrição_Manutenção, Estado_Conservação, Pressão_Pneus, Nível_Óleo
-FROM source.Prontuário;
+FROM grupo3_schema.Prontuário;
 
 INSERT INTO stage.Patios (ID_Pátio, ID_Endereco, Capacidade)
 SELECT ID_Pátio, ID_Endereco, Capacidade
-FROM source.Pátios;
+FROM grupo3_schema.Pátios;
 
 INSERT INTO stage.Reservas (ID_Reserva, ID_Cliente, ID_Veículo, Data_Reserva, Data_Início, Data_Fim, Status_Reserva, Pátio_Retirada, Pátio_Devolução)
 SELECT ID_Reserva, ID_Cliente, ID_Veículo, Data_Reserva, Data_Início, Data_Fim, Status_Reserva, Pátio_Retirada, Pátio_Devolução
-FROM source.Reservas;
+FROM grupo3_schema.Reservas;
 
 INSERT INTO stage.Locações (ID_Locação, ID_Reserva, Data_Retirada, Data_Devolução_Prevista, Data_Devolução_Realizada, Valor_Aluguel, Pátio_Retirada, Pátio_Devolução, Status_Locação)
 SELECT ID_Locação, ID_Reserva, Data_Retirada, Data_Devolução_Prevista, Data_Devolução_Realizada, Valor_Aluguel, Pátio_Retirada, Pátio_Devolução, Status_Locação
-FROM source.Locações;
+FROM grupo3_schema.Locações;
 
 INSERT INTO stage.Endereco (ID_Endereco, Rua, Numero, Bairro, Cidade, Estado, CEP, Complemento)
 SELECT ID_Endereco, Rua, Numero, Bairro, Cidade, Estado, CEP, Complemento
-FROM source.Endereco;
+FROM grupo3_schema.Endereco;
