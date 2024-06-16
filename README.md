@@ -90,4 +90,4 @@ Os scripts de carga estão localizados na pasta loading. Eles carregam os dados 
 
 A etapa de geração de relatórios envolve a criação de consultas SQL que produzem os relatórios necessários para a análise de dados, bem como a matriz de percentuais de movimentação entre pátios.
 
-Os scripts de geração de relatórios estão localizados na pasta reports.
+Os scripts de geração de relatórios estão localizados na pasta analysis.
