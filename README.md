@@ -42,6 +42,9 @@ Os códigos para extração, transformação e carga ETL para o esquema dimensio
 
 ```markdown
 /dwh
+├── /analysis
+│ ├── matrix.sql
+│ └── reports.sql
 ├── /extraction
 │ ├── /grupo1
 │ │ ├── create_stage.sql
@@ -61,7 +64,6 @@ Os códigos para extração, transformação e carga ETL para o esquema dimensio
 │ └── transformation_tables.sql
 ├── /loading
 │ └── loading.sql
-└── /reports
 ```
 
 ## Extração de Dados
